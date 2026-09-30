@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/timetable"
+	xmlns:tns="http://www.example.org/timetable"
+	elementFormDefault="qualified">
+
+	<xs:simpleType name="typeTeacher">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ZbAk">
+				<xs:annotation>
+					<xs:documentation>Zbigniew Aksamit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WłPa">
+				<xs:annotation>
+					<xs:documentation>Włodzimierz Pawlicki</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AgLe">
+				<xs:annotation>
+					<xs:documentation>Agnieszka Lejman</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GrRu">
+				<xs:annotation>
+					<xs:documentation>Grzegorz Rutkowski</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KaŚl">
+				<xs:annotation>
+					<xs:documentation>Kacper Ślipko</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MaJa">
+				<xs:annotation>
+					<xs:documentation>Magdalena Jakubowska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MaKa">
+				<xs:annotation>
+					<xs:documentation>Małgorzata Kasperczak</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MiKu">
+				<xs:annotation>
+					<xs:documentation>Mirella Kurek-Wardyn</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WaDr">
+				<xs:annotation>
+					<xs:documentation>Waldemar Drapikowski</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="KoSz">
+				<xs:annotation>
+					<xs:documentation>Konrad Szymański</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ZyKo">
+				<xs:annotation>
+					<xs:documentation>Zygmunt Komański</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MaSa">
+				<xs:annotation>
+					<xs:documentation>Marzena Sapkowska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ArAd">
+				<xs:annotation>
+					<xs:documentation>Artur Adam</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MaAd">
+				<xs:annotation>
+					<xs:documentation>Maciej Adamczak</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MaDr">
+				<xs:annotation>
+					<xs:documentation>Marta Drozdowska</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AnJe">
+				<xs:annotation>
+					<xs:documentation>Aneta Jerzycka</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SePa">
+				<xs:annotation>
+					<xs:documentation>Sebastian Paprzycki</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	
+	<xs:complexType name="lessonContent">
+		<xs:sequence>
+			<xs:element name="subject" type="xs:string" />
+			<xs:element name="teacher" type="tns:typeTeacher" />
+			<xs:element name="fromTo" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	
+	<xs:element name="lesson" type="tns:lessonContent" />
+	<xs:element name="break" type="tns:lessonContent" />
+	<xs:element name="substitute" type="tns:lessonContent" />
+	<xs:element name="freeoflessons" type="tns:lessonContent" />
+
+	
+	<xs:element name="dayofTheweek">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="9">
+					<xs:element ref="tns:lesson" />
+					<xs:element ref="tns:break" />
+					<xs:element ref="tns:substitute" />
+					<xs:element ref="tns:freeoflessons" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="datetime" type="xs:date" use="optional" />
+			<xs:attribute name="name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	
+	<xs:element name="schedule">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tns:dayofTheweek" maxOccurs="5" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

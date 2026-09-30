@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl.xsl"?>
+<schedule xmlns="http://www.example.org/timetable"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.example.org/timetable ../xsd/xsd.xsd">
+
+  <dayofTheweek name="Poniedziałek" datetime="2026-03-30">
+    <break>
+      <subject>WF</subject>
+      <teacher>KoSz</teacher>
+      <fromTo>08:00:00-08:45:00</fromTo>
+    </break>
+    <lesson>
+      <subject>WF</subject>
+      <teacher>KoSz</teacher>
+      <fromTo>08:50:00-09:35:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Polski</subject>
+      <teacher>MiKu</teacher>
+      <fromTo>09:45:00-10:30:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Fizyka</subject>
+      <teacher>KaŚl</teacher>
+      <fromTo>10:35:00-11:20:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Fizyka</subject>
+      <teacher>KaŚl</teacher>
+      <fromTo>11:40:00-12:25:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Matematyka</subject>
+      <teacher>ArAd</teacher>
+      <fromTo>12:30:00-13:15:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Geografia</subject>
+      <teacher>AnJe</teacher>
+      <fromTo>13:20:00-14:05:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>HIT</subject>
+      <teacher>MaSa</teacher>
+      <fromTo>14:10:00-14:55:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Religia</subject>
+      <teacher>SePa</teacher>
+      <fromTo>15:00:00-15:45:00</fromTo>
+    </lesson>
+  </dayofTheweek>
+
+  <dayofTheweek name="Wtorek" datetime="2026-03-31">
+    <lesson>
+      <subject>Tworzenie i administrowanie bazami danych</subject>
+      <teacher>ZyKo</teacher>
+      <fromTo>08:00:00-08:45:00</fromTo>
+    </lesson>
+    <break>
+      <subject>Tworzenie i administrowanie bazami danych</subject>
+      <teacher>ZyKo</teacher>
+      <fromTo>08:50:00-09:35:00</fromTo>
+    </break>
+    <lesson>
+      <subject>Tworzenie stron i aplikacji internetowych</subject>
+      <teacher>ZbAk</teacher>
+      <fromTo>09:45:00-10:30:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Tworzenie stron i aplikacji internetowych</subject>
+      <teacher>ZbAk</teacher>
+      <fromTo>10:35:00-11:20:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Zajęcia z Wychowawcą</subject>
+      <teacher>KaŚl</teacher>
+      <fromTo>11:40:00-12:25:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>WF</subject>
+      <teacher>KoSz</teacher>
+      <fromTo>12:30:00-13:15:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Pracownia programowania obiektowego</subject>
+      <teacher>KaŚl</teacher>
+      <fromTo>13:20:00-14:05:00</fromTo>
+    </lesson>
+    <freeoflessons>
+      <subject>Pracownia programowania obiektowego</subject>
+      <teacher>KaŚl</teacher>
+      <fromTo>14:10:00-14:55:00</fromTo>
+    </freeoflessons>
+  </dayofTheweek>
+
+  <dayofTheweek name="Środa" datetime="2026-04-01">
+    <substitute>
+      <subject>Programowanie aplikacji desktopowych i mobilnych</subject>
+      <teacher>MaJa</teacher>
+      <fromTo>08:00:00-08:45:00</fromTo>
+    </substitute>
+    <lesson>
+      <subject>Programowanie obiektowe</subject>
+      <teacher>MaJa</teacher>
+      <fromTo>08:50:00-09:35:00</fromTo>
+    </lesson>
+    <break>
+      <subject>Informatyka</subject>
+      <teacher>WaDr</teacher>
+      <fromTo>09:45:00-10:30:00</fromTo>
+    </break>
+    <lesson>
+      <subject>Działalność gospodarcza w branży informatycznej</subject>
+      <teacher>MaKa</teacher>
+      <fromTo>10:35:00-11:20:00</fromTo>
+    </lesson>
+    <freeoflessons>
+      <subject>Historia</subject>
+      <teacher>MaSa</teacher>
+      <fromTo>11:40:00-12:25:00</fromTo>
+    </freeoflessons>
+    <lesson>
+      <subject>J.Angielski</subject>
+      <teacher>WłPa</teacher>
+      <fromTo>12:30:00-13:15:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Pracownia aplikacji desktopowych i mobilnych</subject>
+      <teacher>GrRu</teacher>
+      <fromTo>13:20:00-14:05:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Pracownia aplikacji desktopowych i mobilnych</subject>
+      <teacher>GrRu</teacher>
+      <fromTo>14:10:00-14:55:00</fromTo>
+    </lesson>
+  </dayofTheweek>
+
+  <dayofTheweek name="Czwartek" datetime="2026-04-02">
+    <lesson>
+      <subject>J.Niemiecki</subject>
+      <teacher>AgLe</teacher>
+      <fromTo>08:50:00-09:35:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Matematyka</subject>
+      <teacher>ArAd</teacher>
+      <fromTo>09:45:00-10:30:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Matematyka</subject>
+      <teacher>ArAd</teacher>
+      <fromTo>10:35:00-11:20:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Angielski Zawodowy</subject>
+      <teacher>MaAd</teacher>
+      <fromTo>11:40:00-12:25:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Polski</subject>
+      <teacher>MiKu</teacher>
+      <fromTo>12:30:00-13:15:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Polski</subject>
+      <teacher>MiKu</teacher>
+      <fromTo>13:20:00-14:05:00</fromTo>
+    </lesson>
+  </dayofTheweek>
+
+  <dayofTheweek name="Piątek" datetime="2026-04-03">
+    <lesson>
+      <subject>Matematyka</subject>
+      <teacher>ArAd</teacher>
+      <fromTo>08:00:00-08:45:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Niemiecki</subject>
+      <teacher>AgLe</teacher>
+      <fromTo>09:45:00-10:30:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>J.Angielski</subject>
+      <teacher>WłPa</teacher>
+      <fromTo>10:35:00-11:20:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Chemia</subject>
+      <teacher>MaDr</teacher>
+      <fromTo>11:40:00-12:25:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Biologia</subject>
+      <teacher>MaDr</teacher>
+      <fromTo>12:30:00-13:15:00</fromTo>
+    </lesson>
+    <lesson>
+      <subject>Historia</subject>
+      <teacher>MaSa</teacher>
+      <fromTo>13:00:00-13:45:00</fromTo>
+    </lesson>
+  </dayofTheweek>
+
+</schedule>
