@@ -1,0 +1,4 @@
+com\krdl\task12\BookApiApplication.class
+com\krdl\task12\controller\BookController.class
+com\krdl\task12\repository\BookRepository.class
+com\krdl\task12\model\Book.class
