@@ -1,0 +1,27 @@
+package com.krdl.task14.config;
+
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SwaggerSecurityScheme {
+
+    @Bean
+    public OpenAPI openAPI() {
+
+        return new OpenAPI()
+                .addSecurityItem(new SecurityRequirement().addList(AppConstants.SWAGGER_SCHEME_NAME))
+                .components(new Components()
+                        .addSecuritySchemes(AppConstants.SWAGGER_SCHEME_NAME,
+                                new SecurityScheme()
+                                        .type(SecurityScheme.Type.APIKEY)
+                                        .in(SecurityScheme.In.HEADER)
+                                        .name(AppConstants.SWAGGER_SCHEME_NAME)
+                        )
+                );
+    }
+}
