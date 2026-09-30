@@ -1,0 +1,11 @@
+/target/
+/logs/
+/.settings/
+/.github/
+/.openapi-generator/
+.project
+.classpath
+.factorypath
+*.bat
+/.metadata/
+.sonarlint
